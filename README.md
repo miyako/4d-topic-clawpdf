@@ -39,3 +39,7 @@ OPEN URL($file.platformPath)
 複数のプロフィールを管理することもできます。
 
 <img src="https://github.com/user-attachments/assets/c968b36e-50e0-4f42-9180-6c192d57db87" width=500 height=auto />
+
+## PowerShellを利用する方法
+
+印刷キューにジョブが送信されるのを待ってPDFを出力させるスクリプトの[例題](https://github.com/clawsoftware/clawPDF/blob/master/docs/com_examples/Powershell/CreatePDFwithPassword.ps1)があります。
