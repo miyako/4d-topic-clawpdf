@@ -15,11 +15,6 @@ Next
 Dim clawPDFObj
 Set clawPDFObj = CreateObject("clawPDF.clawPdfObj")
 
-If Not clawPDFObj.IsInstanceRunning Then
-    WScript.Echo "No running instance of clawPDF"
-    WScript.Quit
-End If
-
 Set clawPDFQueue = CreateObject("clawPDF.JobQueue")
 
 On Error Resume Next
