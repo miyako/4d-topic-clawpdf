@@ -19,9 +19,6 @@
 ```4d
 SET CURRENT PRINTER("clawPDF")
 
-PRINTERS LIST($printers)
-SET CURRENT PRINTER("clawPDF")
-
 $name:="請求書"
 var $file : 4D.File
 $file:=Folder(fk home folder).folder("clawPDF").file($name+".pdf")
