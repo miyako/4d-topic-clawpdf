@@ -35,12 +35,10 @@ Else
     If(printJob.IsSuccessful) Then
         WScript.Echo "Success: "  & fullPath
     Else  
-        WScript.Echo "Fail:" & fullPath
+        WScript.Echo "Fail: " & fullPath
     End If
 End If
  
 On Error Resume Next
 clawPDFQueue.ReleaseCom()
 On Error GoTo 0
-
-WScript.Sleep 2000
