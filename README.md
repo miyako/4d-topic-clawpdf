@@ -35,3 +35,7 @@ CLOSE PRINTING JOB
 
 OPEN URL($file.platformPath)
 ```
+
+複数のプロフィールを管理することもできます。
+
+<img src="https://github.com/user-attachments/assets/c968b36e-50e0-4f42-9180-6c192d57db87" width=500 height=auto />
