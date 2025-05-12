@@ -13,3 +13,28 @@
 
 * *Enable automatic saving* を有効にします。
 * 保存パスを`C:\Users\<Username>\<PrinterName>`に設定します。
+
+下記の要領で印刷できます。
+
+```4d
+SET CURRENT PRINTER("clawPDF")
+
+PRINTERS LIST($printers)
+SET CURRENT PRINTER("clawPDF")
+
+$name:="請求書"
+var $file : 4D.File
+$file:=Folder(fk home folder).folder("clawPDF").file($name+".pdf")
+If ($file.exists)
+	$file.delete()
+End if 
+
+SET PRINT OPTION(Paper option; "A5")
+SET PRINT OPTION(Spooler document name option; $name)
+
+OPEN PRINTING JOB
+$h:=Print form("test")
+CLOSE PRINTING JOB
+
+OPEN URL($file.platformPath)
+```
