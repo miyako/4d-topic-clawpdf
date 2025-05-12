@@ -3,7 +3,7 @@ SET CURRENT PRINTER:C787("clawPDF")
 
 $vbs:=File:C1566(File:C1566("/RESOURCES/clawPDF.vbs").platformPath; fk platform path:K87:2)
 
-$out:=System folder:C487(Desktop:K41:16)+"ああああ.pdf"
+$out:=System folder:C487(Desktop:K41:16)+"test.pdf"
 
 SET ENVIRONMENT VARIABLE:C812("_4D_OPTION_CURRENT_DIRECTORY"; $vbs.parent.platformPath)
 SET ENVIRONMENT VARIABLE:C812("_4D_OPTION_BLOCKING_EXTERNAL_PROCESS"; "false")
