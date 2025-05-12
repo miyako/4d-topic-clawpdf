@@ -3,7 +3,6 @@ Set args = WScript.Arguments
 
 Dim fullPath
 fullPath = WScript.StdIn.ReadLine()
-WScript.Echo "You typed: " & fullPath
 
 Dim clawPDFObj
 Set clawPDFObj = CreateObject("clawPDF.clawPdfObj")
