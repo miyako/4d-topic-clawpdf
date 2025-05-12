@@ -27,7 +27,6 @@ If (Not clawPDFQueue.WaitForJob(10)) Then
     WScript.Echo "The print job did not reach the queue within 10 seconds"
     WScript.Quit
 Else
-   WScript.Echo "Currently there are " & clawPDFQueue.Count & " job(s) in the queue"
    Dim printJob
    Set printJob = clawPDFQueue.NextJob
    
@@ -48,3 +47,5 @@ End If
 On Error Resume Next
 clawPDFQueue.ReleaseCom()
 On Error GoTo 0
+
+WScript.StdIn.ReadLine()
