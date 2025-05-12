@@ -1,23 +1,9 @@
-Function UnquotePath(path)
-    If Len(path) >= 2 Then
-        If Left(path, 1) = """" And Right(path, 1) = """" Then
-            UnquotePath = Mid(path, 2, Len(path) - 2)
-            Exit Function
-        End If
-    End If
-    UnquotePath = path
-End Function
-
 Dim args 
 Set args = WScript.Arguments
 
-If args.Count = 0 Then
-    WScript.Echo "No output path provided."
-    WScript.Quit
-End If
-
 Dim fullPath
-fullPath = UnquotePath(args(0))
+fullPath = WScript.StdIn.ReadLine()
+WScript.Echo "You typed: " & fullPath
 
 Dim clawPDFObj
 Set clawPDFObj = CreateObject("clawPDF.clawPdfObj")
