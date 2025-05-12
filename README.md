@@ -42,4 +42,4 @@ OPEN URL($file.platformPath)
 
 ## PowerShellを利用する方法
 
-印刷キューにジョブが送信されるのを待ってPDFを出力させるスクリプトの[例題](https://github.com/clawsoftware/clawPDF/blob/master/docs/com_examples/Powershell/CreatePDFwithPassword.ps1)があります。
+印刷キューにジョブが送信されるのを待ってPDFを出力するスクリプトの[例題](https://github.com/clawsoftware/clawPDF/blob/master/docs/com_examples/Powershell/CreatePDFwithPassword.ps1)があります。
