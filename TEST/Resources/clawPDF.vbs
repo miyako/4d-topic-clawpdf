@@ -48,4 +48,4 @@ On Error Resume Next
 clawPDFQueue.ReleaseCom()
 On Error GoTo 0
 
-WScript.StdIn.ReadLine()
+WScript.Sleep 10000  ' Waits for 10 seconds (10000 ms)
