@@ -12,9 +12,7 @@ For Each objProcess In colProcesses
     objProcess.Terminate
 Next
 
-Dim clawPDFObj
 Set clawPDFObj = CreateObject("clawPDF.clawPdfObj")
-
 Set clawPDFQueue = CreateObject("clawPDF.JobQueue")
 
 On Error Resume Next
@@ -25,23 +23,19 @@ If (Not clawPDFQueue.WaitForJob(10)) Then
     WScript.Echo "The print job did not reach the queue within 10 seconds"
     WScript.Quit
 Else
-   Dim printJob
-   Set printJob = clawPDFQueue.NextJob   
-    If printJob Is Nothing Then
-        WScript.Echo "No job object returned."
-        WScript.Quit
-    Else
-        printJob.ConvertTo(fullPath)
+    Dim printJob
+    Set printJob = clawPDFQueue.NextJob   
 
-        Do While Not printJob.IsFinished
-            WScript.Sleep 500  
-        Loop
+    printJob.ConvertTo(fullPath)
 
-        If(printJob.IsSuccessful) Then
-            WScript.Echo "Success: "  & fullPath
-        Else  
-            WScript.Echo "Fail:" & fullPath
-        End If
+    Do While Not printJob.IsFinished
+        WScript.Sleep 500  
+    Loop
+
+    If(printJob.IsSuccessful) Then
+        WScript.Echo "Success: "  & fullPath
+    Else  
+        WScript.Echo "Fail:" & fullPath
     End If
 End If
  
